@@ -1,0 +1,33 @@
+<!-- kanban.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - Predictions</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction History - Kanban View</h1>
+        <div class="kanban-board">
+            {% for prediction in predictions %}
+            <div class="kanban-card">
+                <h2>Prediction: {{ 'Diabetes Detected' if prediction.prediction == 1 else 'No Diabetes' }}</h2>
+                <ul>
+                    <li><strong>Pregnancies:</strong> {{ prediction.input.Pregnancies }}</li>
+                    <li><strong>Glucose:</strong> {{ prediction.input.Glucose }}</li>
+                    <li><strong>Blood Pressure:</strong> {{ prediction.input.BloodPressure }}</li>
+                    <li><strong>Skin Thickness:</strong> {{ prediction.input.SkinThickness }}</li>
+                    <li><strong>Insulin:</strong> {{ prediction.input.Insulin }}</li>
+                    <li><strong>BMI:</strong> {{ prediction.input.BMI }}</li>
+                    <li><strong>Diabetes Pedigree Function:</strong> {{ prediction.input.DiabetesPedigreeFunction }}</li>
+                    <li><strong>Age:</strong> {{ prediction.input.Age }}</li>
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/" class="back-link">Make another prediction</a>
+    </div>
+</body>
+</html>

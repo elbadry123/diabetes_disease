@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <a href="/predictions" class="kanban-link">View Prediction History (Kanban)</a>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="Pregnancies">Pregnancies:</label>
+                <input type="number" id="Pregnancies" name="Pregnancies" required>
+            </div>
+            <div class="form-group">
+                <label for="Glucose">Glucose:</label>
+                <input type="number" id="Glucose" name="Glucose" required>
+            </div>
+            <div class="form-group">
+                <label for="BloodPressure">Blood Pressure:</label>
+                <input type="number" id="BloodPressure" name="BloodPressure" required>
+            </div>
+            <div class="form-group">
+                <label for="SkinThickness">Skin Thickness:</label>
+                <input type="number" id="SkinThickness" name="SkinThickness" required>
+            </div>
+            <div class="form-group">
+                <label for="Insulin">Insulin:</label>
+                <input type="number" id="Insulin" name="Insulin" required>
+            </div>
+            <div class="form-group">
+                <label for="BMI">BMI:</label>
+                <input type="number" step="0.1" id="BMI" name="BMI" required>
+            </div>
+            <div class="form-group">
+                <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+                <input type="number" step="0.01" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required>
+            </div>
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
